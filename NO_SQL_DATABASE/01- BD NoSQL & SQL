@@ -1,0 +1,42 @@
+BD NoSQL & MySQL
+
+*Part 1 Base de donnée relationnel
+
+-Introduction
+
+-Structure de la base de données Relationel
+
+-Data Definition langage(DDL)
+ Data Query Langage(DQL)
+ Data Protection language(DPL)
+ Data Manipulation language(DML)
+ 
+-Migration de données en temps réel/automatique
+
+-Synchronisation de données
+
+-Nettoyage de données [B.I]
+
+-Containerisation de données
+ 
+-Gestion de transactiond'une base de donnée relationnel(T-SQL)
+
+-Procédure Stocké et trigger(P-SQL)
+
+
+
+*Part 2 Base de dpnnée non relationnel
+
+-Introduction
+
+-Structure
+
+-Collection
+
+-Document
+
+-Backup/Restauration d'une base données (en temps réel)
+
+-Gestion de transactiond'une base de donnée non relationnel
+
+

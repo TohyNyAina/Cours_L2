@@ -1,0 +1,44 @@
+PROJET D'EXAMEN
+ RE-developper FB
+
+-diagramme cas d'utilisation
+-diagramme de sequence					-diagramme de composant...
+-diagramme de classe	
+-diagramme d'objet				
+
+
+				BD Relationnelle
+					-MCD
+					-MLD
+					-MPD
+
+DIAGRAMME DE CAS D'UTILISATION
+
+-ELEMENT::
+	-comportement application
+
+1-Identifier tout les cas possible de l'application
+2-Regrouper les cas d meme entité
+3-Identifier les relation entre les cas
+4-Identifier les acteurs (Primaire(source action) et secondaire(apres source action)).
+
+relation;: include::maka fichier
+
+
+
+
+	-comportement fonctionnelle											-non fonctionnelle
+(envoie sms), qui lit directement, 									-
+
+
+						relation inclusion, heritage, generalisation
+
+inclusion
+ include: comportement, sous comportement
+--------->
+
+Heritage
+condition , ohatra : misy A sy B , B m'heriter A izany hoe ny B tsy mfonctionne tsara raha tsisy A ; A est condition de B , ohatra : se logger , tsy afaka mlogger (B) raha tsy ms'engresistrer (A)
+
+Generalisation: A:cas général , B:cas particulier
+

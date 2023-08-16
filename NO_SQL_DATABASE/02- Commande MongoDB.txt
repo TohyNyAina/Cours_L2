@@ -1,0 +1,33 @@
+>mongosh (acceder dans la base de donnée mongo) 
+
+>show databases (mampiseho db)
+
+>create database 
+
+>use nom_bd (Miditra ao anatin'ny db)
+
+(Document ny anaran'ny donnée ao anaty table amin'ny mongo ary collection kosa ny anaran'ny table)
+
+>db.createCollection("nom du collection") (fomba famoronana collection)
+
+>db.author.insertOne({"name": "J.K.Rowling"}) (insertion ana donnée)(io author io ilay table nanaovana insertion ana donnée)
+
+>show collections (mijery ireo table nocreena)
+
+>db.author.find() (mampiseho ny donnée ao anaty table author)
+
+>db.author.find().pretty() (mampiseho ny donnée ao anaty table author fa mba manjamanja ny endrikany xd)
+
+>db.nom_collection.insertOne(
+{
+ "nom": "Steve Jobs",
+ "age": "23",
+ "tel": "0346850871"
+}
+)  (Insertion ana donnée)
+
+>db.test.insertOne([{"nom": "rabe", "prenom": "rabe"}, {"nom": "alida", "prenom": "alida"}]) (io no ampesaina ra hanao insersion simultané izany hoe olona maromaro samy hafa fa anaty document iray ID anankiray iany no ananan'izy roa) 
+
+testmongodb> db.test.insertMany([{"nom": "rabe", "prenom": "rabe"}, {"nom": "alida", "prenom": "alida"}]) (io no ampesaina ra hanao insersion simultané izany hoe olona maromaro samy hafa fa anaty document samy hafa samy manana ny ID any izy roa) 
+
+

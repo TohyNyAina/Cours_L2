@@ -1,0 +1,65 @@
+MongoDB Gestion de securité
+
+Hicree utilisateur hafa isika eto raha test ny utilisateur par defaut
+
+> use filmdb (Miditra ao anatin'ilay base de donnée aloha voalohany indrindra)
+
+> db.createUser({
+		user:"nom_utilisateur",
+		pwd:"mot_de_passe",
+		roles:[{
+			role: "dbOwner",
+			db:"filmdb"
+			}
+		      ]
+		}) (io ilay foma hicreena azy)
+		
+> show users (mampiseho ny utilisateur nocreena rehetra ireto zao ilay izy teo :
+
+[
+  {
+    _id: 'filmdb.test',
+    userId: new UUID("7d97cea2-796c-4800-9422-456bc1f8ef71"),
+    user: 'test',
+    db: 'filmdb',
+    roles: [ { role: 'dbOwner', db: 'filmdb' } ],
+    mechanisms: [ 'SCRAM-SHA-1', 'SCRAM-SHA-256' ]
+  }
+]
+
+
+)	
+
+> db.auth ("nom_utilisateur","mot_de_passe") (io ny commande ra hijery oe afaka miconnecter amin'ilay serveur ve ilay utilisateur crée NB:Ao anatin'ilay db iany no manoratra an'io commande io)
+
+
+
+Andao ary hoquittena mintsy ilay teo de hiconnect amin'ilay utilisateur isika.
+
+>mongosh.mongodb://127.0.0.1:27017/filmdb -u nom_utilisateur -p (io ny commande hidiran'ny utilisateur ao amin'ilay serveur rehefa manindry entre dia asainy mampiditra mdp dia ampidirina ny mdp dia tafiditra ao anatiny. Automatique rediriger any amin'ilay db)
+
+
+
+Eto indray isika dia higerer ny privilege afaka ataon'ilay user
+
+> show users (jerena aloha oe miexiste ve ilay utilisateur, rehefa hita ilay user zay vao afaka manome privilege azy)
+
+> db.grantRolesToUser("test", [
+				{role:"read",db:"filmdb"}
+				{role:"readWrite",db:""filmdb"}
+		              ]
+		     )
+(de vita ny sokola)
+
+
+
+Andeha indray ho anulena ilay privilege nataontsika teo
+
+> db.revokeRolesFromUser("nom_utilisateur", [
+						{ role:"ilay role ho esorina", db:"filmdb"}
+					    ]
+			)
+
+> show users (raha hiverifier fa niala tokoa ilay privilege)
+
+	
